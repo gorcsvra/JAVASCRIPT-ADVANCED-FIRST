@@ -1,0 +1,2 @@
+# JAVASCRIPT-ADVANCED-FIRST
+A t360 anyagaalapján a 
