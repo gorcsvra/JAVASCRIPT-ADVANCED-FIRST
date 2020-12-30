@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //A polyyfill egy olan kód/kódrészlet,mely biztosítha számunkra azt a működést,
+        //melyet natív módo elvátnák a böngészőtől
+
+        console.log(String.prototype.includes);
+
+        if (!String.prototype.includes) {
+            'use strict';
+            String.prototype.includes = function (search, start) {
+                if (typeof start !== 'number' || isNaN(start)) {
+                    start = 0;
+                }
+                if (typeof search !== 'string' || start + sarch.length > tis.length) {
+                    return false;
+                } else {
+                    return this.indexOf(search, start) !== -1;
+
+                }
+            };
+        }
+        console.log('resut:', 'Borabora'.includes('bora'));
+        //A tanspoller-ek olyan eszközök, amelyek egy adot nyelvben írt kódot átalakítanak
+        //egy másik nyelv ekvivalens kódjává,
+        //A JS-ben az esetben nem egy másik nyelvetm hanm a szabvány egy másik verzióját jelenti.
+        //Akkor használjuk, ha nem csak új tulajdnságokat metódusokat(arra jó a polyfill) akarunk használni,
+        //hanem újfajta szintaxist is.
+    </script>
+</body>
+
+</html>
